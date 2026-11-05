@@ -1,0 +1,142 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #111827, #312e81, #1e1b4b);
+}
+
+.calculator {
+    width: 350px;
+    padding: 25px;
+    border-radius: 25px;
+    background: rgba(20, 24, 45, 0.95);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    margin-bottom: 25px;
+}
+
+.header h2 {
+    font-size: 22px;
+    letter-spacing: 1px;
+}
+
+.header span {
+    color: #a78bfa;
+    font-size: 25px;
+}
+
+.display {
+    height: 110px;
+    background: #0f172a;
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+#previous {
+    color: #94a3b8;
+    font-size: 16px;
+    min-height: 22px;
+}
+
+#current {
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+button {
+    height: 60px;
+    border: none;
+    border-radius: 14px;
+    background: #27334f;
+    color: white;
+    font-size: 21px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #3d4b6d;
+    transform: translateY(-3px);
+}
+
+button:active {
+    transform: scale(0.94);
+}
+
+.special {
+    background: #475569;
+    color: #c4b5fd;
+}
+
+.operator {
+    background: #5b4bc4;
+    color: white;
+}
+
+.operator:hover {
+    background: #7867ec;
+}
+
+.equal {
+    background: linear-gradient(135deg, #8b5cf6, #6366f1);
+    color: white;
+}
+
+.equal:hover {
+    background: linear-gradient(135deg, #a78bfa, #818cf8);
+}
+
+.zero {
+    grid-column: span 2;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 22px;
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #64748b;
+}
+
+@media (max-width: 400px) {
+    .calculator {
+        width: 92%;
+        padding: 18px;
+    }
+
+    button {
+        height: 55px;
+    }
+}
